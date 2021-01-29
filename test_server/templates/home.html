@@ -1,0 +1,34 @@
+<html>
+<h2 id="protocol"></h2>
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+
+<script src="static/script.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+
+<div class="form-style-5">
+<form>
+<fieldset>
+<legend> CS 263 Form</legend>
+<input type="text" id="name" name="field1" placeholder="Your Name">
+<input type="email" name="field2" placeholder="Your Email">
+<textarea name="field3" placeholder="About yourself"></textarea>
+<textarea name="field4" placeholder="Favorite Paper"></textarea>
+<textarea name="field5" placeholder="Favorite Lecture"></textarea>
+<label for="fav">Favorite Problem Set:</label>
+<select id="fav" name="field6">
+  <option value="buffer">Buffer Overflows</option>
+  <option value="reverse">Reverse Engineering</option>
+  <option value="sandbox">Sandboxing</option>
+</select>
+<label for="rec">Would you recommend this course to a friend?</label>
+<select id="rec" name="field7">
+  <option value="yes">Yes</option>
+  <option value="no">No</option>
+</select>
+</fieldset>
+<input id="button" type="button" value="Submit" onclick="main()"/>
+</form>
+</div>
+</html>
